@@ -1,62 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document object model</title>
 </head>
+
 <body>
-    <h1>Welcome to this javascript tutorial</h1>
-    <div id="firstcontainer">
-        <button id="click">click me</button>
+    <input type="text" id="input">
+    <button id="click" onclick="ans()">submit</button>
+    <h1 id="show"></h1>
+
+    <div class="container" id="container">
+        <div class="box" id="box-1">box-1</div>
+        <div class="box" id="box-1">box-2</div>
+        <div class="box" id="box-1">box-3</div>
+        <div class="box" id="box-1">box-4</div>
     </div>
 
-    <div class="container">
-        <p>This is a paragraph</p>
-    </div>
-
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iure veritatis dolorem molestias laboriosam est
+        cumque incidunt necessitatibus in sint asperiores, magni quo.</p>
 
 
 
     <style>
         .container {
-            border: 5px solid black;
-            background: red;
-            margin: 3px;
-            padding: 0px;
+            background-color: teal;
+            display: flex;
+            flex-direction: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 450px;
+            padding: 10px;
+            row-gap: 10px;
         }
 
 
+        .box {
 
-        .bg-primary {
-            background-color: aliceblue;
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            display: flex;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
         }
 
 
-        .text-success {
-            color: red;
+        .round-border {
+            border-radius: 50%;
+            border: solid 5px black;
+
         }
     </style>
+
 </body>
 <script>
+    /*
+                                   document
+                                     |
+                                     |
+                     |---------------html--------------|                
+                    head                           |---body---|
+                     |                             |          |
+                   title                     ---h1 tag---   p tag
+                     |                       |          |
+                     |                      text     attributes
+                  meta 
+    */
 
-    
-    // DOM Manipulation
-    document.getElementById('click').click();
-    document.getElementById('click').style.border="5px, blue";
 
-    
-    let elemt = document.getElementById('click');
-    console.log(elemt);
 
-   let elemClass = document.getElementsByClassName('container');
-   console.log(elemClass);
-   elemClass[0].style.background = "yellow";
-   elemClass[0].classList.add("bg-primary")
-   elemClass[0].classList.add("text-success");
-   console.log(elemt.innerHTML)
-   console.log(elemt.innerText)
- 
+                    // Finding HTML Elements 
+    /*
+    document.getElementById('')
+    document.getElementsClassName('')
+    document.getElementByTagName('')
+    */
+
+    const abc = document.getElementById('input');
+    abc.style.background = "black";
+    abc.style.color = "white";
+    abc.setAttribute('src', 'xyz');
+    function ans() {
+    const ans = document.getElementById('input').value;
+    document.getElementById('show').innerHTML = ans;
+    document.getElementById('input').value = " ";
+
+    }
+
+
+
+    const mybody = document.body;
+    console.log(mybody);
+
+
+    const box2 = document.getElementById('box-2');
+    console.log(box2);
+
+
+
+    const divs = document.getElementsByTagName('p');
+    console.log(divs);
+
+
+
+    const boxes = document.getElementsByClassName('container');
+    console.log(boxes);
+
+
+
+
+    const random = document.querySelector('.container');
+    console.log(random);
+
+
+
+
+                      // Finding HTML Elements 
+    /*
+    element.innerHTML =
+    element.arrtribute = 
+    element.style.property = 
+    element.setAttribute =
+    */
+
+    document.getElementById('box-1').innerHTML = "<h1>hello world</h>"
+
+        document.getElementById('box-1').style.background = "yellow";
+
+
+        document.getElementById('box-1').classList.add('round-border');
+
+
+        const boxs = document.getElementsByClassName('box');
+
+        for(let a of boxs) {
+            a.classList.add('round-border');
+        }
+
+
+        document.getElementById('box-1').classList.remove('box');
+        document.getElementById('box-1').classList.remove('round-border');
+
+
+
+
+
+
+                    //    Adding and deleting elements 
+    /*
+    document.createElement();
+    document.removeChild();
+    document.appendChild();
+    document.replaceChild();
+    document.write();
+    */
+
+        const newpara = document.createElement('p');
+        newpara.innerHTML = "this is brand new";
+        newpara.classList.add('box');
+
+        document.getElementById('container').appendChild(newpara);
+
+
 </script>
 
 </html>
