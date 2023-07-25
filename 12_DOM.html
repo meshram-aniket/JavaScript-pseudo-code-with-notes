@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+</head>
+<body>
+    <h1>Welcome to this javascript tutorial</h1>
+    <div id="firstcontainer">
+        <button id="click">click me</button>
+    </div>
+
+    <div class="container">
+        <p>This is a paragraph</p>
+    </div>
+
+
+
+
+    <style>
+        .container {
+            border: 5px solid black;
+            background: red;
+            margin: 3px;
+            padding: 0px;
+        }
+
+
+
+        .bg-primary {
+            background-color: aliceblue;
+        }
+
+
+        .text-success {
+            color: red;
+        }
+    </style>
+</body>
+<script>
+
+    
+    // DOM Manipulation
+    document.getElementById('click').click();
+    document.getElementById('click').style.border="5px, blue";
+
+    
+    let elemt = document.getElementById('click');
+    console.log(elemt);
+
+   let elemClass = document.getElementsByClassName('container');
+   console.log(elemClass);
+   elemClass[0].style.background = "yellow";
+   elemClass[0].classList.add("bg-primary")
+   elemClass[0].classList.add("text-success");
+   console.log(elemt.innerHTML)
+   console.log(elemt.innerText)
+ 
+</script>
+
+</html>
