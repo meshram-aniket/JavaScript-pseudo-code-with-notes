@@ -54,6 +54,20 @@
             border: solid 5px black;
 
         }
+
+
+        /* #input {
+            border: 50%;
+            border-radius: 10px;
+        } */
+
+
+        /* #click {
+            color: yellow;
+            background: #000;
+            border-radius: 50%;
+
+        } */
     </style>
 
 </body>
@@ -119,49 +133,62 @@
 
 
 
-                      // Finding HTML Elements 
+                      // Changing HTML Elements 
     /*
     element.innerHTML =
-    element.arrtribute = 
+    element.attribute = 
     element.style.property = 
     element.setAttribute =
+    
     */
-
+        
     document.getElementById('box-1').innerHTML = "<h1>hello world</h>"
 
-        document.getElementById('box-1').style.background = "yellow";
+    document.getElementById('box-1').style.background = "yellow";
 
 
-        document.getElementById('box-1').classList.add('round-border');
-
-
-        const boxs = document.getElementsByClassName('box');
-
-        for(let a of boxs) {
-            a.classList.add('round-border');
-        }
-
-
-        document.getElementById('box-1').classList.remove('box');
-        document.getElementById('box-1').classList.remove('round-border');
+    document.getElementById('box-1').classList.add('round-border');
+    document.getElementById('box-1').classList.remove('round-border');
 
 
 
+    const boxs = document.getElementsByClassName('box');
 
+    for(let a of boxs) {
+        a.classList.add('round-border');
+    }
+
+
+    document.getElementById('box-1').classList.remove('box');
+    document.getElementById('box-1').classList.remove('round-border');
+
+
+    const inputs = document.getElementById('input');
+    inputs.style.background="black";
+    inputs.style.borderRadius="50px"
+    inputs.style.color="white";
+
+
+    const sub = document.getElementById('show');
+    sub.style.background="black";
+    sub.style.color="white"
 
 
                     //    Adding and deleting elements 
     /*
-    document.createElement();
-    document.removeChild();
-    document.appendChild();
-    document.replaceChild();
-    document.write();
+    document.createElement(element);
+    document.removeChild(element);
+    document.appendChild(element);
+    document.replaceChild(new, old);
+    document.write(text);
     */
 
         const newpara = document.createElement('p');
-        newpara.innerHTML = "this is brand new";
+        // newpara.innerHTML = "this is brand new";
         newpara.classList.add('box');
+        newpara.write("lorwm")
+
+        
 
         document.getElementById('container').appendChild(newpara);
 
