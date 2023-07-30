@@ -8,42 +8,32 @@
 <body>
     
 
-    <script>
-        // this method excutes after given milisecond and keep getting repeated
-        // const a = setInterval(fun, 3000);
-        // function fun() {
-        //     document.writeln("hello world" + "<br>")
-        // }
-
-        setInterval(fun, 3000);
-
-
-
-
-        // this method excute after given time and it excutes only once
-        // const b = setTimeout(myfun, 9000);
-
-        // function myfun() {
-        //     document.write("My self Aniket Meshram" + "<br>")
-        // }
-
-
-
-        // cleartimeout
-        const c = setInterval(fun1, 3000);
-
-        let count = 0;
-        function fun1() {
-            console.log("hello");
-            // count++;
-        }
-
-        function clear() {
-            clearInterval(c)
-        }
-
-
-    </script>
+    
     
 </body>
+<script>
+
+    // arrow function
+   const ans = (a, b) => {
+    return a + b;
+   }
+
+
+   logkaro = () => {
+    console.log("hello i am aniket");
+   }
+   setInterval(logkaro, 2000);
+
+
+   login = () => {
+      console.log("login function")
+   }
+   setTimeout(login, 5000);
+
+   
+
+//    use clearInterval/clearTimeout to cancel setInterval/setTimeout 
+
+
+</script>
 </html>
