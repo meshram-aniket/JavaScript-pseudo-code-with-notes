@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="container">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box2</div>
+        <div class="box" id="box4">box2</div>
+    </div>
+    <div id="div2">
+        <h1>hello</h1>
+    </div>
+    
+
+    <style>
+        #container {
+            background-color: teal;
+            display: flex;
+            flex-direction: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 1000px;
+            height: 250px;
+            padding: 10px;
+            row-gap: 10px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            display: flex;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .bg-radius {
+            border-radius: 50px;
+            border: solid black 3px;
+            background-color: yellow;
+        }
+        .bg-radius1 {
+            border-radius: 50%;
+            border: solid black 3px;
+            background-color: yellow;
+        }
+    </style>
+</body>
+<script>
+
+    const cont = document.getElementById('container');
+    cont.classList.add('bg-radius');
+
+    const box = document.getElementsByClassName('box');
+    for(let a of box) {
+        a.classList.add('bg-radius1');
+    }
+
+    box[0].style.background="red";
+    box[2].style.background="green";
+    box[3].style.background="blue";
+
+    
+    box[0].innerHTML="Aniket Meshram";
+    box[0].style.border="yellow solid 5px"
+
+    cont.setAttribute = ("class", "bg-radius")
+    console.log(cont)
+
+
+    let elem = document.createElement("h6");
+    let text = document.createTextNode("this is h1 tag");
+    elem.appendChild(text);
+    cont.appendChild(elem);
+
+    
+    const divs = document.getElementById('div2');
+    let elems = document.createElement("h1");
+    let texts = document.createTextNode("this is new tag")
+    elems.appendChild(texts);
+    divs.appendChild(elems);
+
+    // divs.removeChild(elems)
+    
+
+
+
+
+</script>
+</html>
