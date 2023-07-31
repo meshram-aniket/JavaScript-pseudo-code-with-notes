@@ -22,8 +22,9 @@ const fun = (a, b) => {
     return (a + b);
 }
 
-
-
-//  a module cannot hava multiple default
 export default list;
+
+// Note-
+  
+//  a module cannot hava multiple default
 // export default fun

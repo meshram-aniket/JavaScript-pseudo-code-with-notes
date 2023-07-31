@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // let promise = new Promise((resolve, reject) => {
+    //     console.log("promise is pending")
+    //     setTimeout(() => {
+    //         console.log("I am resolved")
+    //           resolve(true);
+    //         //   reject(new Error("i am an error"))
+    //     }, 5000)
+    // })
+
+    // let promise2 = new Promise((resolve, reject) => {
+    //     console.log("promise is rejected")
+    //     setTimeout(() => {
+    //         //   resolve(true);
+    //         console.log("I am rejected")
+    //           reject(new Error("i am an error"))
+    //     }, 5000)
+    // })
+
+    // // console.log(promise)
+    // // console.log(promise2)
+
+
+    // promise.then((value)=>{
+    //     console.log(value)
+    // })
+
+
+    // promise2.catch((error)=>{
+    //     console.log("some error occur in p2")
+    // })
+
+
+
+
+    let promise = new Promise(function(resolve, reject) {
+        console.log("hello");
+        resolve()
+        reject();
+    })
+
+    const myfun = () => {
+        const age = 32;
+        if(age == 34) {
+            resolve(true)
+        }
+        else {
+            reject("reject")
+        }
+    }
+
+
+    promise.then((value) => {
+        console.log("chiu")
+    },
+    promise.catch((error) => {
+        console.log("error")
+    })
+    );
+
+   
+
+    
+    
+</script>
+</html>
