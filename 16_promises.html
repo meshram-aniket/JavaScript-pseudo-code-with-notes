@@ -10,100 +10,60 @@
 </body>
 <script>
 
-    // let promise = new Promise((resolve, reject) => {
-    //     console.log("promise is pending")
-    //     setTimeout(() => {
-    //         console.log("I am resolved")
-    //           resolve(true);
-    //         //   reject(new Error("i am an error"))
-    //     }, 5000)
-    // })
+  
+    // ticket example    
+    let ticket = new Promise(function(resolve, reject) {
+        const isBoarded = true;
+        if(isBoarded) {
+            const a = "done"
+            resolve("ticket " + a);
+        }
+        else {
 
-    // let promise2 = new Promise((resolve, reject) => {
-    //     console.log("promise is rejected")
-    //     setTimeout(() => {
-    //         //   resolve(true);
-    //         console.log("I am rejected")
-    //           reject(new Error("i am an error"))
-    //     }, 5000)
-    // })
+            const b = "not done"
+            reject("ticket " + b);
+        }
+    })
 
-    // console.log(promise)
-    // console.log(promise2)
-
-
-    // promise.then((value)=>{
-    //     console.log(value)
-    // })
-
-
-    // promise2.catch((error)=>{
-    //     console.log("some error occur in p2")
-    // })
+    ticket.then((a) => {
+        console.log("woho", a)
+    }).catch((b) => {
+        console.log("oh no", b)
+    }).finally(() => {
+        console.log("i will always be executed")
+    })
 
 
 
 
-    // function getCheese() {
-    //     setTimeout (() => {
-    //         const cheese = 'cheese';
-    //         return cheese
-    //     }, 2000)
-    // }
-    
-    
-    // let ticket = new Promise(function(resolve, reject) {
-    //     const isBoarded = true;
-    //     if(isBoarded) {
-    //         resolve('you are not in the flight');
-    //     }
-    //     else {
-    //         reject("your flight has been cancelled")
-    //     }
-    // })
+    // pizza example
+    function getCheese() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const cheese = "🧀";
+                resolve(cheese);
+            },  2000);
+        });
+    }
 
-    // ticket.then((date) => {
-    //     console.log("woho", data)
-    // }).catch((error) => {
-    //     console.log("oh no", error)
-    // }).finally(() => {
-    //     console.log("i will always be executed")
-    // })
+    function makeDough(cheese) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const dough = cheese + "🫓";
+                resolve(dough);
+                // reject("Bad cheese");
+            }, 2000);
+        });
+    }
 
-
-
-
-
-
-
-
-function getCheese() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const cheese = "🧀";
-            resolve(cheese);
-        }, 2000);
-    });
-}
-
-function makeDough(cheese) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const dough = cheese + "🫓";
-            resolve(dough);
-            // reject("Bad cheese");
-        }, 2000);
-    });
-}
-
-function bakePizza(dough) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const pizza = dough + "🍕";
-            resolve(pizza);
-        }, 2000);
-    });
-}
+    function bakePizza(dough) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+               const pizza = dough + "🍕";
+               resolve(pizza);
+            }, 2000);
+        });
+    }
 
 // async function orderPizza() {
 //     try {
@@ -141,6 +101,42 @@ getCheese()
     .finally(() => {
         console.log("Process ended");
     });
+
+
+
+
+
+
+    // age example
+    function p() { 
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                var age = 2 + 3;
+        
+            if (age == 5) {
+               const data = "age matched successfully";
+               resolve(data);
+            }
+
+            else {
+               const ans = "not matched successfully";
+               reject(ans);
+            }
+            }, 8000)
+        })
+    }
+
+
+
+    p().then((data) => {
+        console.log(data)
+    }).catch((ans) => {
+        console.log(ans)
+    }).finally(() => {
+        console.log("process done")
+    })
+
+
 
 
 </script>
