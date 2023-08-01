@@ -10,37 +10,138 @@
 </body>
 <script>
 
-    let promise = new Promise((resolve, reject) => {
-        console.log("promise is pending")
-        setTimeout(() => {
-            console.log("I am resolved")
-              resolve(true);
-            //   reject(new Error("i am an error"))
-        }, 5000)
-    })
+    // let promise = new Promise((resolve, reject) => {
+    //     console.log("promise is pending")
+    //     setTimeout(() => {
+    //         console.log("I am resolved")
+    //           resolve(true);
+    //         //   reject(new Error("i am an error"))
+    //     }, 5000)
+    // })
 
-    let promise2 = new Promise((resolve, reject) => {
-        console.log("promise is rejected")
-        setTimeout(() => {
-            //   resolve(true);
-            console.log("I am rejected")
-              reject(new Error("i am an error"))
-        }, 5000)
-    })
+    // let promise2 = new Promise((resolve, reject) => {
+    //     console.log("promise is rejected")
+    //     setTimeout(() => {
+    //         //   resolve(true);
+    //         console.log("I am rejected")
+    //           reject(new Error("i am an error"))
+    //     }, 5000)
+    // })
 
     // console.log(promise)
     // console.log(promise2)
 
 
-    promise.then((value)=>{
-        console.log(value)
-    })
+    // promise.then((value)=>{
+    //     console.log(value)
+    // })
 
 
     // promise2.catch((error)=>{
     //     console.log("some error occur in p2")
     // })
+
+
+
+
+    // function getCheese() {
+    //     setTimeout (() => {
+    //         const cheese = 'cheese';
+    //         return cheese
+    //     }, 2000)
+    // }
     
     
+    // let ticket = new Promise(function(resolve, reject) {
+    //     const isBoarded = true;
+    //     if(isBoarded) {
+    //         resolve('you are not in the flight');
+    //     }
+    //     else {
+    //         reject("your flight has been cancelled")
+    //     }
+    // })
+
+    // ticket.then((date) => {
+    //     console.log("woho", data)
+    // }).catch((error) => {
+    //     console.log("oh no", error)
+    // }).finally(() => {
+    //     console.log("i will always be executed")
+    // })
+
+
+
+
+
+
+
+
+function getCheese() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const cheese = "🧀";
+            resolve(cheese);
+        }, 2000);
+    });
+}
+
+function makeDough(cheese) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const dough = cheese + "🫓";
+            resolve(dough);
+            // reject("Bad cheese");
+        }, 2000);
+    });
+}
+
+function bakePizza(dough) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const pizza = dough + "🍕";
+            resolve(pizza);
+        }, 2000);
+    });
+}
+
+// async function orderPizza() {
+//     try {
+//         const cheese = await getCheese();
+//         console.log("here is the cheese", cheese);
+
+//         const dough = await makeDough(cheese);
+//         console.log("here is the dough", dough);
+
+//         const pizza = await bakePizza(dough);
+//         console.log("here is the pizza", pizza);
+//     } catch (err) {
+//         console.log("error occured", err);
+//     }
+//     console.log("Process ended");
+// }
+
+// orderPizza();
+
+getCheese()
+    .then((cheese) => {
+        console.log("here is the cheese", cheese);
+        return makeDough(cheese);
+    })
+    .then((dough) => {
+        console.log("here is the dough", dough);
+        return bakePizza(dough);
+    })
+    .then((pizza) => {
+        console.log("here is the pizza", pizza);
+    })
+    .catch((data) => {
+        console.log("error occured", data);
+    })
+    .finally(() => {
+        console.log("Process ended");
+    });
+
+
 </script>
 </html>

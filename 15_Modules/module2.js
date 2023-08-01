@@ -1,3 +1,5 @@
+// ES6 MODULES
+
 export const collegeName = "Xavier Institute of Engineering, Mumbai"
 
 export const ans = () => {
@@ -18,7 +20,7 @@ const list = [
 ];
 
 
-const fun = (a, b) => {
+export const fun = (a, b) => {
     return (a + b);
 }
 
@@ -27,4 +29,8 @@ export default list;
 // Note-
   
 //  a module cannot hava multiple default
-// export default fun
+//  export default fun
+
+
+
+

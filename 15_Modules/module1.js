@@ -1,4 +1,4 @@
-import list, {ans, name, collegeName} from "./module2.js";
+import list, {ans, name, collegeName, fun} from "./module2.js";
 ans();
 
 console.log(`My college name is ${collegeName}`);
@@ -9,6 +9,10 @@ name("nayan");
 name("mehul");
 name("rocky");
 
-console.log(list[1].name);
+console.log(list);
+
+
+console.log(fun(4,6));
+
 
 
