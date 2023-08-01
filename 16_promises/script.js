@@ -53,44 +53,50 @@
         });
     }
 
-// async function orderPizza() {
-//     try {
-//         const cheese = await getCheese();
-//         console.log("here is the cheese", cheese);
-
-//         const dough = await makeDough(cheese);
-//         console.log("here is the dough", dough);
-
-//         const pizza = await bakePizza(dough);
-//         console.log("here is the pizza", pizza);
-//     } catch (err) {
-//         console.log("error occured", err);
-//     }
-//     console.log("Process ended");
-// }
 
 // orderPizza();
 
-getCheese()
-    .then((cheese) => {
-        console.log("here is the cheese", cheese);
-        return makeDough(cheese);
-    })
-    .then((dough) => {
-        console.log("here is the dough", dough);
-        return bakePizza(dough);
-    })
-    .then((pizza) => {
-        console.log("here is the pizza", pizza);
-    })
-    .catch((data) => {
-        console.log("error occured", data);
-    })
-    .finally(() => {
-        console.log("Process ended");
-    });
+// getCheese()
+//     .then((cheese) => {
+//         console.log("here is the cheese", cheese);
+//         return makeDough(cheese);
+//     })
+//     .then((dough) => {
+//         console.log("here is the dough", dough);
+//         return bakePizza(dough);
+//     })
+//     .then((pizza) => {
+//         console.log("here is the pizza", pizza);
+//     })
+//     .catch((data) => {
+//         console.log("error occured", data);
+//     })
+//     .finally(() => {
+//         console.log("Process ended");
+//     });
 
 
+    
+
+    // async and await 
+    async function result () {
+        try {
+            const cheese = await getCheese();
+            console.log("here is the cheese", cheese)
+
+            const dough = await makeDough(cheese)
+            console.log("here is the dough", dough)
+
+            const pizza = await bakePizza(dough);
+            console.log("here is the pizza", pizza)
+        } catch(err) {
+        console.log("error occured");
+        } finally {
+        console.log("process done")
+        }
+    }
+
+result();
 
 
 
