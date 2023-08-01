@@ -1,78 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document object model</title>
-</head>
-
-<body>
-    <input type="text" id="input">
-    <button id="click" onclick="ans()">submit</button>
-    <h1 id="show"></h1>
-
-    <div class="container" id="container">
-        <div class="box" id="box-1">box-1</div>
-        <div class="box" id="box-1">box-2</div>
-        <div class="box" id="box-1">box-3</div>
-        <div class="box" id="box-1">box-4</div>
-    </div>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iure veritatis dolorem molestias laboriosam est
-        cumque incidunt necessitatibus in sint asperiores, magni quo.</p>
-
-
-
-    <style>
-        .container {
-            background-color: teal;
-            display: flex;
-            flex-direction: wrap;
-            justify-content: space-between;
-            align-items: center;
-            width: 450px;
-            padding: 10px;
-            row-gap: 10px;
-        }
-
-
-        .box {
-
-            width: 100px;
-            height: 100px;
-            background-color: white;
-            display: flex;
-            flex-shrink: 0;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        .round-border {
-            border-radius: 50%;
-            border: solid 5px black;
-
-        }
-
-
-        /* #input {
-            border: 50%;
-            border-radius: 10px;
-        } */
-
-
-        /* #click {
-            color: yellow;
-            background: #000;
-            border-radius: 50%;
-
-        } */
-    </style>
-
-</body>
-<script>
-    /*
+ /*
                                    document
                                      |
                                      |
@@ -192,7 +118,3 @@
 
         document.body.appendChild(newpara);
 
-
-</script>
-
-</html>

@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-<script>
-    // Operators in JavaScript
+ // Operators in JavaScript
     // 1. Arithmetic 
 
     var a = 100;
@@ -53,6 +42,3 @@
     console.log(true || false);
     console.log(true || true);
 
-
-</script>
-</html>

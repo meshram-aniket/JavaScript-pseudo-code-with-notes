@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-<script>
-    let myDate = new Date();
+let myDate = new Date();
     console.log(myDate.getTime());
     console.log(myDate.getDate());
     console.log(myDate.getDay());
@@ -19,6 +8,3 @@
     console.log(myDate.getMonth());
     console.log(myDate.getTimezoneOffset());
 
-
-</script>
-</html>

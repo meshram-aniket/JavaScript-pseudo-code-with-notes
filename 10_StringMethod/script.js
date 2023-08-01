@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-
-<script>
-    let myLovelyString = "Aniket is good boy";
+let myLovelyString = "Aniket is good boy";
     console.log(myLovelyString.length);
 
     console.log(myLovelyString.indexOf('good'));  // first index
     console.log(myLovelyString.lastIndexOf('good'));  // last index
     console.log(myLovelyString.slice(0, 3));  // including first and excluding last
     console.log(myLovelyString.replace("Aniket", "Aman"))   // replace one element by another
-
-</script>
-</html>

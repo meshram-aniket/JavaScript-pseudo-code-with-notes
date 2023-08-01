@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-<script>
 
-  
     // ticket example    
     let ticket = new Promise(function(resolve, reject) {
         const isBoarded = true;
@@ -136,8 +124,3 @@ getCheese()
         console.log("process done")
     })
 
-
-
-
-</script>
-</html>

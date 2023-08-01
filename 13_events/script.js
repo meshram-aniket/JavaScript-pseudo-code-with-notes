@@ -1,67 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-    <!-- for event handler -->
-    <!-- <div class="container" id="container">
-        <div class="box" id="box-1" onclick="myfunc()">box-1</div>
-        <div class="box" id="box-2" onload="myfunc1()">box-2</div>
-        <div class="box" id="box-3" onmouseover="myfunc2()">box-3</div>
-        <div class="box" id="box-4" onmouseout="myfunc3()">box-4</div>
-        
-    </div> -->
-
-
-
-
-    <!-- for event listner -->
-    <div class="container" id="container">
-        <div class="box" id="box-1" >box-1</div>
-        <div class="box" id="box-2" >box-2</div>
-        <div class="box" id="box-3" >box-3</div>
-        <div class="box" id="box-4" >box-4</div>    
-    </div>
-
-    <h1 id="hello">Hello world</h1>
-
-
-    <form action="">
-        <input type="text" onkeypress="myfunc4()">
-    </form>
-
-    <style>
-         #container {
-            background-color: teal;
-            display: flex;
-            flex-direction: wrap;
-            justify-content: space-between;
-            align-items: center;
-            width: 1000px;
-            height: 250px;
-            padding: 10px;
-            row-gap: 10px;
-        }
-
-        .box {
-            width: 200px;
-            height: 200px;
-            background-color: white;
-            display: flex;
-            flex-shrink: 0;
-            justify-content: center;
-            align-items: center;
-        }
-
-    </style>
-</body>
-
-<script>
-    /*
+ /*
     Events allow you to write javascript code that reacts to certain situations.
     Examples of events include:
     -> The user clicks the mouse 
@@ -146,6 +83,3 @@
     })
     
     
-
-</script>
-</html>
