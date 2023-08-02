@@ -99,8 +99,6 @@
 result();
 
 
-
-
     // age example
     function p() { 
         return new Promise((resolve, reject) => {
