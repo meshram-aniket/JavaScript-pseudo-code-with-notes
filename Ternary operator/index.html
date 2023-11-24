@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let radius = [1,2,3,4,5]
+
+        let calculation = (radi, logic) => {
+            let answer = []
+            for(i = 0; i < radi.length; i++ ) {
+                answer.push(logic(radi[i]))
+            }
+            return answer
+        }
+
+                
+        let circumference = (radi) => {
+            return Math.PI * radi * radi;
+        }
+        let diameter = (radi) => {
+            return 2 * radi;
+        }
+        let area = (radi) => {
+            return 2 * Math.PI * radi;
+        }
+
+        console.table(calculation(radius, area))
+        console.table(calculation(radius, circumference))
+        console.table(calculation(radius, diameter))
+
+        let table = (value) => {
+            let ans = []
+            for(i = 1; i <= 10; i++) {
+                ans.push(value*i);
+            }
+            return ans
+        }
+
+        console.table(table(199))
+
+        </script>
+</body>
+</html>

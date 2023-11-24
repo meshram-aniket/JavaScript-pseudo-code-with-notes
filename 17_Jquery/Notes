@@ -1,0 +1,30 @@
+there are three main types of selectors in jQuerry
+ 1. element selectors
+ 2. id selectors
+ 3. class selector
+
+
+    Syntax: 
+    $(document).ready(function(){
+
+    })
+
+ 1. element selector - this is an example of element selector 
+ $('p').click();
+
+
+ 2. id selector - this is an example of id selector
+ $("#second").click();
+
+
+ 3. class selector - this is an example of class selector
+ $(".odd").click();
+
+
+
+
+ events in JQuerry
+    Mouse events = click, dbclick, mouseenter, mouseover
+    KeyboardEvent = keypress, keydown, MediaKeyStatusMap
+    form events = submit, change, focus, blur
+    document/window events = load, resize, scroll, unload

@@ -15,18 +15,18 @@ $(document).ready(function () {    // dont load script before loading the websit
 
 
 
-    // $('#second').dbclick(function() {
-    //   console.log("you double clicked on p");   // do this when we click on p 
-    //   $(this).hide();
-    // })
+    $('#second').dbclick(function() {
+      console.log("you double clicked on p");   // do this when we click on p 
+      $(this).hide();
+    })
 
 
 
 
-    // $('#second').mouseenter(function() {
-    //   console.log("you mouse enter on p");   // do this when we click on p 
-    //   $(this).hide();
-    // })
+    $('#second').mouseenter(function() {
+      console.log("you mouse enter on p");   // do this when we click on p 
+      $(this).hide();
+    })
 
 
     // there are three main types of selectors in jQuerry
